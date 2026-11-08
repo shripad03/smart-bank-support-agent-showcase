@@ -79,7 +79,7 @@ The live run is a single run on one model (`nvidia/nemotron-3-nano-omni-30b-a3b-
 
 ## Known limitations
 
-The project keeps a verified register of 38 findings (12 High, 19 Medium, 7 Low), each with evidence, severity and a planned phase: [docs/product/KNOWN_ISSUES.md](docs/product/KNOWN_ISSUES.md). The ones that matter most today:
+The project keeps a verified register of 39 findings (12 High, 20 Medium, 7 Low), each with evidence, severity and a planned phase: [docs/product/KNOWN_ISSUES.md](docs/product/KNOWN_ISSUES.md). The ones that matter most today:
 
 - **Retrieval is keyword-only**, so paraphrases and short queries miss ("forgot password" does not find the PIN entry).
 - **No authentication.** The caller supplies the customer id, and the handoff states identity as verified unconditionally.
@@ -96,7 +96,7 @@ These are listed deliberately: the roadmap below is ordered by them.
 | Phase | Scope | Status |
 |---|---|---|
 | 0 | Baseline, secrets hygiene, verified known-issues register, retrieval baseline | Done |
-| 1 | Scope and assumptions: [PRD](docs/product/PRD.md), [use cases](docs/product/USE_CASES.md), assumptions, acceptance criteria | In progress (drafts) |
+| 1 | Scope and assumptions: [PRD](docs/product/PRD.md), [use cases](docs/product/USE_CASES.md), [assumptions](docs/product/ASSUMPTIONS.md), [acceptance criteria](docs/product/ACCEPTANCE_CRITERIA.md) | Done |
 | 2 | Architecture and security: architecture rewrite, threat model, decision records | Next |
 | 3 | Agent quality: structured outputs, hybrid retrieval, grounding and citation validation, resilience, red-team and real-model evals | Planned |
 | 4 | FastAPI service, streaming, authentication, web UI | Planned |
@@ -111,8 +111,10 @@ These are listed deliberately: the roadmap below is ordered by them.
 | Path | Content |
 |---|---|
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Current architecture, verified against the implementation |
-| [docs/product/PRD.md](docs/product/PRD.md) | Product requirements (v0.1 draft) |
-| [docs/product/USE_CASES.md](docs/product/USE_CASES.md) | 22 use cases with status and evidence (v0.1 draft) |
+| [docs/product/PRD.md](docs/product/PRD.md) | Product requirements (v1.0) |
+| [docs/product/USE_CASES.md](docs/product/USE_CASES.md) | 22 use cases with status and evidence (v1.0) |
+| [docs/product/ASSUMPTIONS.md](docs/product/ASSUMPTIONS.md) | 23 assumptions with risk, validation and owner decisions (v1.0) |
+| [docs/product/ACCEPTANCE_CRITERIA.md](docs/product/ACCEPTANCE_CRITERIA.md) | 42 measurable criteria, hard gates and evaluation sets (v1.0; targets provisional) |
 | [docs/product/KNOWN_ISSUES.md](docs/product/KNOWN_ISSUES.md) | Verified findings register |
 | [results/](results) | Retrieval baseline and a live sample run |
 | [reference/tests](reference/tests) | The test suite and scenario file, for reading |

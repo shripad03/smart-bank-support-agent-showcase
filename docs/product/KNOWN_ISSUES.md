@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| Status | Draft v2: baseline `0920b47` plus live-model findings (branch `phase-0-baseline`) |
-| Date | 2026-11-04 |
+| Status | Draft v3: baseline `0920b47`, live-model findings and ESC-1 (branch `phase-0-baseline`) |
+| Date | 2026-11-08 |
 | Owner | Engineering |
 | Source | Re-verification of `PROJECT_ASSESSMENT.md` sections 5 to 8 against the code; live runs on `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning` (thinking off); `eval/baseline_retrieval.py` |
 | Test baseline | 66 of 66 offline tests pass (all use a scripted fake model) |
@@ -39,6 +39,7 @@ This register lists defects and gaps that were reproduced or confirmed in the co
 | SEC-9 | Supply chain | `python-dotenv>=1.0.0` is an unbounded range, there is no lockfile, and no vulnerability scanning. | `requirements.txt`; no lockfile, `pyproject.toml` or constraints file in the repository root. | Medium | 7 |
 | REL-1 | Model integration | Validated on one model only. The offline tests never exercise a real model. The first live run (`nvidia/nemotron-3-nano-omni-30b-a3b-reasoning`, thinking off) completed 15 of 15 queries with 0 errors and exposed RTR-1, GND-1 and GND-2. There is no run on `gpt-4o-mini`, no labelled evaluation, and answer quality is unmeasured. | Live `run_tests.py` run on 2026-11-03: 9 answered, 3 refused, 3 escalated, 0 router errors, latency 0.9 to 10 s. Model-specific: thinking must be disabled through `LLM_EXTRA_BODY`, otherwise router calls take 8 to 17 s against the 20 s timeout. Every automated test patches `agent.llm.get_llm` (`tests/fakes.py:110`). | Medium | 3 |
 | REL-2 | Escalation | Open-handoff follow-ups are acknowledged but not recorded. The reply states "I've added your latest message to it", yet the handoff record and `handoffs.jsonl` are unchanged; only a `handoff_addendum` log event is written. | Probe: after a vague follow-up on a thread with an open handoff, reply contains the sentence, `handoff` equals the original, `handoffs.jsonl` has 1 line, 1 `handoff_addendum` event. `agent/graph.py:158-160`; text at `agent/guards.py:41`. An answerable follow-up is answered normally and is also not attached to the handoff. | High | 3 (statement), 8 (workflow) |
+| ESC-1 | Escalation | Over-escalation of a blocked card with no stated cause. Q14 ("Mi tarjeta fue bloqueada y no sé por qué") was escalated HIGH with reason "possible unauthorized activity", and the reply tells the customer to report possible fraud although none was reported. Expected: a technical answer and an offer of support (PRD FR-08, decision D-03). | Live harness run 2026-11-08, Q14: handoff `HND-20261108-D55C53`, priority HIGH, source `gen-004`. Single run; the router signal that caused it was not isolated. | Medium | 3 |
 | REL-3 | Failure handling | Fail-closed routing amplifies outages and rate limits. If the router fails twice, the query becomes a MEDIUM `SYSTEM_FAILURE` handoff. Observed live: 4 of 80 router calls failed on both attempts with HTTP 429 (NVIDIA free tier) and would have escalated ordinary customers. | Probe: router raising on every call gives `SYSTEM_FAILURE`, `MEDIUM`; `agent/graph.py:87-92`. Live: 10 `router_error` events, all `OpenAIRateLimitError`, during a 140 s burst of about 34 requests per minute. | Medium | 3, 8 |
 | REL-4 | Conversation | Specialists have no conversation memory. They receive only the current message and the router's one-line summary. | `agent/specialists.py:55` (`answer_intent` signature) and `agent/graph.py:109`. | Medium | 3 |
 | REL-5 | State | Conversation state grows without bound while the router reads only the last 6 messages. | Probe: 25 turns on one thread store 50 messages. `agent/router.py:33-38`; `agent/graph.py:230`. | Medium | 5 |

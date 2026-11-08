@@ -4,8 +4,8 @@
 
 | | |
 |---|---|
-| Version | 0.1 (draft for review) |
-| Status | Draft. Not yet approved. |
+| Version | 1.0 |
+| Status | Approved by the product owner, 2026-11-08. |
 | Date | 2026-11-06 |
 | Owner | Product and Engineering |
 | Baseline | Branch `phase-0-baseline`, 66 offline tests passing, live run of 2026-11-03 |
@@ -98,7 +98,7 @@ Each row states the requirement, the current behaviour and the gap. "Phase" is t
 | FR-05 | **Multi-topic.** A message with several questions is answered in full, in priority order, without silently dropping a part. | Sequential specialists, up to three intents. | Technical advice grounding in Q06 unverified. | 3 |
 | FR-06 | **Clarification.** When there is no actionable question (for example only emotion), acknowledge the sentiment and ask one clarifying question; escalate if the customer remains distressed without detail. | Designed; the live router refuses such messages instead. | RTR-1. Scenario Q08 not met. | 3 |
 | FR-07 | **Escalation.** One score decides: threshold 30, HIGH at 60. Reasons: active fraud 70, legal or regulatory threat 60, explicit request for a person 40, repeated unresolved 30, system failure 30, knowledge-base gap 15, emotional distress 10 or 25; modifiers for amount, open ticket, tier and tenure. | Implemented as specified and covered by offline tests. | Weights hand-tuned on 15 cases; no live evaluation of escalation correctness. | 3 |
-| FR-08 | **Fraud rule.** Fraud escalation applies only when the customer reports unauthorised activity or compromise. A blocked card with no stated cause is a technical question: answer from the knowledge base and offer to connect support. | Q14 ("card blocked, I don't know why") was escalated HIGH as possible unauthorised activity. | Over-escalation; to be added to the register. Decision D-03. | 3 |
+| FR-08 | **Fraud rule.** Fraud escalation applies only when the customer reports unauthorised activity or compromise. A blocked card with no stated cause is a technical question: answer from the knowledge base and offer to connect support. | Q14 ("card blocked, I don't know why") was escalated HIGH as possible unauthorised activity. | ESC-1 (over-escalation). Decision D-03. | 3 |
 | FR-09 | **Handoff.** Each escalation produces a structured payload: id, reason, secondary reasons, priority and score with factors, recommended queue, customer context, relevant transactions, attempted resolution, conversation excerpt and flags. It is stored durably and visible to the assigned human. | Payload written to a local JSONL file; no queue; `identity_verified` is always true for a known id. | SEC-2, REL-6, REL-9. | 5, 8 |
 | FR-10 | **Open-case follow-ups.** A message on a thread with an open handoff is appended to that handoff, or answered normally if it is a new question; the reply must not claim an action that did not happen. | The reply says the message was added, but the handoff is unchanged. | REL-2 (High), REL-9. | 3, 8 |
 | FR-11 | **Language.** Reply in the customer's language. Fixed texts exist in English and Spanish. | Works for Q14; fixed text for other languages falls back to English. | RET-5 (Spanish raw retrieval returns nothing). | 3 |
@@ -245,7 +245,7 @@ Totals: 10 meet, 3 partial, 2 not met.
 | FR-01, FR-02, PR-07 | SEC-6, GND-1, GND-2, GND-3 | Q05, Q09, Q13, Q15 | 3 |
 | FR-03 | RET-1, RET-2, RET-3, RET-4, RET-5 | Q09, Q14 | 3 |
 | FR-04, FR-06 | RTR-1, REL-10 | Q08 | 3 |
-| FR-07, FR-08 | none (new row to add) | Q10, Q14, Q15 | 3 |
+| FR-07, FR-08 | ESC-1 | Q10, Q14, Q15 | 3 |
 | FR-09, FR-10, FR-12 | REL-2, REL-4, REL-5, REL-6, REL-9 | multi-turn | 3, 5, 8 |
 | FR-13, NFR-01 | SEC-2 | all with customer context | 4 |
 | FR-14, PR-02, PR-03 | SEC-3, SEC-4, SEC-5, SEC-11 | Q11, Q12 | 2, 3 |

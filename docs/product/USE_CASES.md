@@ -4,8 +4,8 @@
 
 | | |
 |---|---|
-| Version | 0.1 (draft for review) |
-| Status | Draft. Not yet approved. |
+| Version | 1.0 |
+| Status | Approved by the product owner, 2026-11-08. Refusal wording for UC-15 awaits review (DQ-6 in `ACCEPTANCE_CRITERIA.md`). |
 | Date | 2026-11-06 |
 | Owner | Product and Engineering |
 | Parent document | `product/PRD.md` v0.1 (requirements FR, PR, NFR, CR; decisions D-01 to D-05) |
