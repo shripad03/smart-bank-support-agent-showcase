@@ -1,0 +1,93 @@
+{
+  "technical": [
+    {
+      "id": "tech-001",
+      "topic": "Mobile App Login Issues",
+      "content": "If you are unable to log in to the mobile app, try the following steps: (1) Ensure your app is updated to the latest version (v4.2.1 or higher). (2) Clear the app cache from your device settings. (3) Reset your PIN via the 'Forgot PIN' option on the login screen. (4) If biometric login fails, disable and re-enable it under Settings > Security. If the issue persists after these steps, your account may be temporarily locked after 5 failed attempts — contact support to unlock."
+    },
+    {
+      "id": "tech-002",
+      "topic": "Mobile App Crashes",
+      "content": "App crashes are most commonly caused by an outdated app version or an incompatible operating system. The mobile app requires iOS 14+ or Android 10+. If your device meets these requirements and the app still crashes: (1) Uninstall and reinstall the app. (2) Ensure your device has at least 200MB of free storage. (3) Check for known outages at the service status page. If crashes occur specifically during transfers, this may indicate a network timeout — ensure you have a stable connection."
+    },
+    {
+      "id": "tech-003",
+      "topic": "Push Notifications Not Working",
+      "content": "To receive push notifications: (1) Go to your device Settings > Notifications > Mobile Banking and ensure notifications are enabled. (2) In the app, go to Settings > Alerts and confirm your preferred notification types are active. (3) Check that Do Not Disturb mode is not blocking notifications. Note: Transaction alerts may be delayed up to 2 minutes during peak hours."
+    },
+    {
+      "id": "tech-004",
+      "topic": "Two-Factor Authentication (2FA) Issues",
+      "content": "The bank uses 2FA via SMS or authenticator app. If you are not receiving SMS codes: (1) Verify your registered phone number under Profile > Personal Info. (2) Check if your carrier is blocking short-code messages. (3) Switch to an authenticator app (Google Authenticator or Authy) under Settings > Security > 2FA Method. If you have lost access to your 2FA device, you must visit a branch with a government-issued ID to reset access."
+    },
+    {
+      "id": "tech-005",
+      "topic": "Card Not Showing in App",
+      "content": "If a recently issued card does not appear in the app: (1) Pull down to refresh the Accounts screen. (2) Log out and log back in. (3) New cards may take up to 24 hours to appear after activation. If your card has been active for more than 24 hours and still does not appear, it may need to be manually linked — contact support with your card's last 4 digits."
+    },
+    {
+      "id": "tech-006",
+      "topic": "Scheduled Transfers Not Processing",
+      "content": "Scheduled transfers require a minimum account balance equal to the transfer amount plus any applicable fees at the time of processing. If a scheduled transfer fails: (1) Check your account balance at the scheduled time. (2) Verify the destination account details are correct under Payments > Scheduled. (3) Transfers scheduled for weekends or public holidays process on the next business day. Failed transfers generate an in-app notification and are not automatically retried."
+    }
+  ],
+  "billing": [
+    {
+      "id": "bill-001",
+      "topic": "Monthly Maintenance Fee",
+      "content": "The Classic Checking account has a $12/month maintenance fee. This fee is waived if any of the following conditions are met in the billing cycle: (1) Average daily balance of $1,500 or more. (2) At least one direct deposit of $500 or more. (3) Account holder is under 25 or over 65 years of age. The Premier Checking account has a $25/month fee, waived with an average daily balance of $10,000 or more."
+    },
+    {
+      "id": "bill-002",
+      "topic": "Overdraft Fees",
+      "content": "The bank charges a $35 overdraft fee per transaction when your account balance goes below $0. A maximum of 3 overdraft fees ($105) can be charged per day. Overdraft protection can be linked to a savings account or credit line — linked transfers incur a $10 fee per transfer instead. The bank offers a $50 overdraft buffer (No-Fee Zone) for Premier account holders: transactions that overdraw the account by $50 or less incur no fee."
+    },
+    {
+      "id": "bill-003",
+      "topic": "Disputing a Charge",
+      "content": "To dispute a charge on your account: (1) Navigate to the transaction in the app and tap 'Dispute this transaction'. (2) Select the reason: unauthorized charge, duplicate charge, item not received, or other. (3) Submit any supporting documentation if available. Disputes are reviewed within 5–10 business days. A provisional credit may be issued within 2 business days for disputes over $100. You can track dispute status under Account > Disputes."
+    },
+    {
+      "id": "bill-004",
+      "topic": "Wire Transfer Fees",
+      "content": "Domestic wire transfers: $25 per outgoing transfer, free for incoming. International wire transfers: $45 per outgoing transfer, $15 for incoming. Premier account holders receive 2 free outgoing domestic wire transfers per month. Wire transfers submitted before 3:00 PM ET on business days are processed same day. Transfers submitted after the cutoff or on weekends are processed the next business day."
+    },
+    {
+      "id": "bill-005",
+      "topic": "Interest Rates — Savings",
+      "content": "Standard Savings: 0.05% APY. High-Yield Savings: 4.35% APY (requires minimum $1,000 opening balance, no monthly fee if balance stays above $500). Money Market: 4.60% APY (minimum $5,000 balance required; falls to 0.10% APY if balance drops below minimum). Rates are variable and subject to change — current rates always available at the Rates page on our website."
+    },
+    {
+      "id": "bill-006",
+      "topic": "Late Payment Fee — Credit Card",
+      "content": "Credit card late payment fee: $29 for the first late payment in a 12-month period, $40 for subsequent late payments. Payments received after 5:00 PM ET on the due date are considered late. Autopay can be configured under Card Settings > Autopay to avoid late fees. If a late fee is your first in the past 12 months, you may request a one-time fee waiver by contacting support within 7 days of the charge."
+    }
+  ],
+  "general": [
+    {
+      "id": "gen-001",
+      "topic": "Branch Hours and Locations",
+      "content": "The bank has 142 branches nationwide. Most branches are open Monday–Friday 9:00 AM–5:00 PM and Saturday 9:00 AM–1:00 PM. Drive-through hours may vary. To find the nearest branch or ATM, use the Locations feature in the app or visit the Locations page on our website. Our ATMs are surcharge-free. Premier account holders receive reimbursement of up to $20/month in third-party ATM fees."
+    },
+    {
+      "id": "gen-002",
+      "topic": "Opening a New Account",
+      "content": "New accounts can be opened online, via the app, or in branch. Requirements: (1) Government-issued photo ID. (2) Social Security Number or ITIN. (3) Minimum opening deposit: $25 for Classic Checking, $100 for Premier Checking, $1,000 for High-Yield Savings. Joint accounts require both applicants to be present (in branch) or complete separate identity verification (online). Accounts are typically active within 1 business day of approval."
+    },
+    {
+      "id": "gen-003",
+      "topic": "Zelle and External Transfers",
+      "content": "The bank supports Zelle for peer-to-peer transfers. Zelle transfers to enrolled recipients are typically instant. Daily Zelle limit: $2,500 for Classic accounts, $5,000 for Premier accounts. External bank transfers (ACH) take 1–3 business days. Same-day ACH is available for outgoing transfers up to $1,000 for a $5 fee. To link an external account, go to Transfers > External Accounts and follow the micro-deposit verification process."
+    },
+    {
+      "id": "gen-004",
+      "topic": "Fraud Reporting",
+      "content": "If you suspect fraud on your account: (1) Immediately freeze your card via the app under Card > Freeze Card. (2) Call the 24/7 fraud hotline at 1-800-555-0142. (3) File a dispute for any unauthorized transactions (see Billing > Disputing a Charge). The bank's Zero Liability Policy covers unauthorized transactions reported within 60 days of the statement date. Your account will be reviewed and you will be contacted within 2 business days."
+    },
+    {
+      "id": "gen-005",
+      "topic": "Loan Products",
+      "content": "The bank offers the following loan products: Personal Loans ($1,000–$50,000, APR 7.99%–24.99%, terms 12–60 months), Auto Loans (new and used vehicles, APR from 5.49%, terms up to 84 months), Home Equity Lines of Credit (HELOC, variable rate, up to 85% LTV). Pre-qualification is available online with no impact to credit score. Full applications are processed within 2–5 business days. Existing customers with a Premier account receive a 0.25% rate discount."
+    }
+  ]
+}

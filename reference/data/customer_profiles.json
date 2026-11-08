@@ -1,0 +1,140 @@
+{
+  "customers": [
+    {
+      "customer_id": "CST-1001",
+      "name": "Sarah Mitchell",
+      "account_type": "Premier Checking",
+      "member_since": "2018-03-14",
+      "open_tickets": [],
+      "recent_transactions": [
+        { "date": "2026-08-15", "description": "Zelle transfer to J. Mitchell", "amount": -850.00 },
+        { "date": "2026-08-14", "description": "Direct deposit - Employer", "amount": 3200.00 },
+        { "date": "2026-08-12", "description": "Amazon.com", "amount": -134.99 },
+        { "date": "2026-08-10", "description": "ATM withdrawal", "amount": -200.00 }
+      ]
+    },
+    {
+      "customer_id": "CST-1002",
+      "name": "James Okafor",
+      "account_type": "Classic Checking",
+      "member_since": "2021-07-02",
+      "open_tickets": [
+        { "ticket_id": "TKT-8842", "type": "Billing Dispute", "status": "Under Review", "opened": "2026-08-10" }
+      ],
+      "recent_transactions": [
+        { "date": "2026-08-15", "description": "Overdraft fee", "amount": -35.00 },
+        { "date": "2026-08-15", "description": "Grocery Store", "amount": -67.43 },
+        { "date": "2026-08-13", "description": "Direct deposit - Employer", "amount": 1100.00 },
+        { "date": "2026-08-11", "description": "Disputed charge - TechCo", "amount": -299.00 }
+      ]
+    },
+    {
+      "customer_id": "CST-1003",
+      "name": "Priya Sharma",
+      "account_type": "High-Yield Savings",
+      "member_since": "2020-11-19",
+      "open_tickets": [],
+      "recent_transactions": [
+        { "date": "2026-08-01", "description": "Interest credit", "amount": 18.42 },
+        { "date": "2026-07-15", "description": "Transfer from external account", "amount": 2000.00 },
+        { "date": "2026-07-01", "description": "Interest credit", "amount": 16.87 }
+      ]
+    },
+    {
+      "customer_id": "CST-1004",
+      "name": "Carlos Rivera",
+      "account_type": "Classic Checking",
+      "member_since": "2023-02-08",
+      "open_tickets": [
+        { "ticket_id": "TKT-9103", "type": "Technical - App Login", "status": "Open", "opened": "2026-08-16" }
+      ],
+      "recent_transactions": [
+        { "date": "2026-08-14", "description": "Gas station", "amount": -52.10 },
+        { "date": "2026-08-13", "description": "Payroll - Rivera LLC", "amount": 1800.00 },
+        { "date": "2026-08-10", "description": "Netflix", "amount": -15.99 },
+        { "date": "2026-08-08", "description": "Maintenance fee", "amount": -12.00 }
+      ]
+    },
+    {
+      "customer_id": "CST-1005",
+      "name": "Linda Chen",
+      "account_type": "Premier Checking",
+      "member_since": "2015-06-30",
+      "open_tickets": [],
+      "recent_transactions": [
+        { "date": "2026-08-15", "description": "International wire - Sent", "amount": -3500.00 },
+        { "date": "2026-08-14", "description": "Direct deposit - Pension", "amount": 4100.00 },
+        { "date": "2026-08-12", "description": "Restaurant", "amount": -88.50 },
+        { "date": "2026-08-09", "description": "Pharmacy", "amount": -34.20 }
+      ]
+    },
+    {
+      "customer_id": "CST-1006",
+      "name": "Marcus Thompson",
+      "account_type": "Classic Checking",
+      "member_since": "2022-09-15",
+      "open_tickets": [],
+      "recent_transactions": [
+        { "date": "2026-08-15", "description": "Venmo payment", "amount": -120.00 },
+        { "date": "2026-08-13", "description": "Direct deposit", "amount": 2200.00 },
+        { "date": "2026-08-11", "description": "Electric bill", "amount": -145.00 },
+        { "date": "2026-08-10", "description": "Grocery Store", "amount": -98.32 }
+      ]
+    },
+    {
+      "customer_id": "CST-1007",
+      "name": "Aisha Patel",
+      "account_type": "Money Market",
+      "member_since": "2019-04-22",
+      "open_tickets": [
+        { "ticket_id": "TKT-9201", "type": "Rate Inquiry", "status": "Resolved", "opened": "2026-08-05" }
+      ],
+      "recent_transactions": [
+        { "date": "2026-08-01", "description": "Interest credit", "amount": 191.25 },
+        { "date": "2026-07-15", "description": "Deposit", "amount": 5000.00 },
+        { "date": "2026-07-01", "description": "Interest credit", "amount": 175.80 }
+      ]
+    },
+    {
+      "customer_id": "CST-1008",
+      "name": "Derek Walsh",
+      "account_type": "Classic Checking",
+      "member_since": "2024-01-10",
+      "open_tickets": [],
+      "recent_transactions": [
+        { "date": "2026-08-15", "description": "Coffee shop", "amount": -6.50 },
+        { "date": "2026-08-14", "description": "Direct deposit", "amount": 1500.00 },
+        { "date": "2026-08-13", "description": "Streaming service", "amount": -13.99 },
+        { "date": "2026-08-12", "description": "Maintenance fee", "amount": -12.00 }
+      ]
+    },
+    {
+      "customer_id": "CST-1009",
+      "name": "Fatima Al-Hassan",
+      "account_type": "Premier Checking",
+      "member_since": "2017-08-03",
+      "open_tickets": [
+        { "ticket_id": "TKT-9310", "type": "Fraud Report", "status": "Under Investigation", "opened": "2026-08-17" }
+      ],
+      "recent_transactions": [
+        { "date": "2026-08-17", "description": "Unauthorized - Unknown merchant", "amount": -1200.00 },
+        { "date": "2026-08-16", "description": "Card frozen by customer", "amount": 0.00 },
+        { "date": "2026-08-14", "description": "Direct deposit", "amount": 5500.00 },
+        { "date": "2026-08-12", "description": "Airline ticket", "amount": -620.00 }
+      ]
+    },
+    {
+      "customer_id": "CST-1010",
+      "name": "Tom Nguyen",
+      "account_type": "Classic Checking",
+      "member_since": "2023-11-28",
+      "open_tickets": [],
+      "recent_transactions": [
+        { "date": "2026-08-15", "description": "ATM withdrawal", "amount": -100.00 },
+        { "date": "2026-08-14", "description": "Direct deposit", "amount": 1750.00 },
+        { "date": "2026-08-11", "description": "Online purchase", "amount": -49.99 },
+        { "date": "2026-08-09", "description": "Gas station", "amount": -60.00 }
+      ]
+    }
+  ]
+}
